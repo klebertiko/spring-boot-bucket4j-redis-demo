@@ -1,12 +1,15 @@
-## Spring-boot with Bucket4j and Hazelcast Demo
+## Spring-boot with Bucket4j and Redis Demo
  
 The aim of this demo is to demonstrate **rate-limiting** by using [Bucket4j](https://github.com/vladimir-bukhtoyarov/bucket4j)
- and the *In-Memory Data Grid* [Hazlecast](https://hazelcast.org/).
+ and the *In-Memory Data Grid* [Redis](https://redis.io/).
   
-To do that, we will run two instances of the same application, they share the same bucket which is stored on Hazelcast. 
+To do that, we will run two instances of the same application, they share the same bucket which is stored in Redis. 
 When a request from the same Ip hit any of the two instances the shared bucket is decremented. 
 
 The result is immediately visible to any instance.
+
+ ## Pre requisite
+ 1. Redis server running on port ``6379``
   
  ## Demo
  
